@@ -379,14 +379,14 @@ where cd.codeset_id = 7 -- AF
 -- fix gender
 
 
-create table DM2
+create table ohdsi_cumc_deid_pending.results.DM2
 (person_id int,
 DM2 int,
 age int,
 year_of_birth int,
 time int);
 
-insert into DM2
+insert into ohdsi_cumc_deid_pending.results.DM2
 select p.person_id,
        case when e.person_id is not null then 1 else 0 end  as DM2,
        case when year_of_birth = 1776 then null else 2012 - year_of_birth end as age,
@@ -399,14 +399,14 @@ from ohdsi_cumc_deid_pending.dbo.person p
 where gender_concept_id in (8532, 8507)
 and year_of_birth<1982;
 
-create table DM1
+create table ohdsi_cumc_deid_pending.results.DM1
 (person_id int,
 DM1 int,
 age int,
 year_of_birth int,
 time int);
 
-insert into DM1
+insert into ohdsi_cumc_deid_pending.results.DM1
 select p.person_id,
        case when e.person_id is not null then 1 else 0 end  as DM1,
        case when year_of_birth = 1776 then null else 2012 - year_of_birth end as age,
@@ -419,14 +419,14 @@ from ohdsi_cumc_deid_pending.dbo.person p
 where gender_concept_id in (8532, 8507)
 and year_of_birth<1982;
 
-create table MI
+create table ohdsi_cumc_deid_pending.results.MI
 (person_id int,
 MI int,
 age int,
 year_of_birth int,
 time int);
 
-insert into MI
+insert into ohdsi_cumc_deid_pending.results.MI
 select p.person_id,
        case when e.person_id is not null then 1 else 0 end  as MI,
        case when year_of_birth = 1776 then null else 2012 - year_of_birth end as age,
@@ -439,14 +439,14 @@ from ohdsi_cumc_deid_pending.dbo.person p
 where gender_concept_id in (8532, 8507)
 and year_of_birth<1982;
 
-create table SM
+create table ohdsi_cumc_deid_pending.results.SM
 (person_id int,
 SM int,
 age int,
 year_of_birth int,
 time int);
 
-insert into SM
+insert into ohdsi_cumc_deid_pending.results.SM
 select p.person_id,
        case when e.person_id is not null then 1 else 0 end  as SM,
        case when year_of_birth = 1776 then null else 2012 - year_of_birth end as age,
@@ -459,14 +459,14 @@ from ohdsi_cumc_deid_pending.dbo.person p
 where gender_concept_id in (8532, 8507)
 and year_of_birth<1982;
 
-create table BMI
+create table ohdsi_cumc_deid_pending.results.BMI
 (person_id int,
 BMI int,
 age int,
 year_of_birth int,
 time int);
 
-insert into BMI
+insert into ohdsi_cumc_deid_pending.results.BMI
 select p.person_id,
        case when e.person_id is not null then 1 else 0 end  as BMI,
        case when year_of_birth = 1776 then null else 2012 - year_of_birth end as age,
@@ -479,14 +479,14 @@ from ohdsi_cumc_deid_pending.dbo.person p
 where gender_concept_id in (8532, 8507)
 and year_of_birth<1982;
 
-create table AF
+create table ohdsi_cumc_deid_pending.results.AF
 (person_id int,
 AF int,
 age int,
 year_of_birth int,
 time int);
 
-insert into AF
+insert into ohdsi_cumc_deid_pending.results.AF
 select p.person_id,
        case when e.person_id is not null then 1 else 0 end  as AF,
        case when year_of_birth = 1776 then null else 2012 - year_of_birth end as age,
@@ -499,14 +499,14 @@ from ohdsi_cumc_deid_pending.dbo.person p
 where gender_concept_id in (8532, 8507)
 and year_of_birth<1982;
 
-create table H
+create table ohdsi_cumc_deid_pending.results.H
 (person_id int,
 H int,
 age int,
 year_of_birth int,
 time int);
 
-insert into H
+insert into ohdsi_cumc_deid_pending.results.H
 select p.person_id,
        case when e.person_id is not null then 1 else 0 end  as H,
        case when year_of_birth = 1776 then null else 2012 - year_of_birth end as age,
@@ -520,14 +520,14 @@ where gender_concept_id in (8532, 8507)
 and year_of_birth<1982;
 
 
-create table LL
+create table ohdsi_cumc_deid_pending.results.LL
 (person_id int,
 LL int,
 age int,
 year_of_birth int,
 time int);
 
-insert into LL
+insert into ohdsi_cumc_deid_pending.results.LL
 select p.person_id,
        case when e.person_id is not null then 1 else 0 end  as LL,
        case when year_of_birth = 1776 then null else 2012 - year_of_birth end as age,
